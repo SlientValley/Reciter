@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mLightWhite">
+
+    <LinearLayout
+        android:id="@+id/info_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_info_box"
+        android:orientation="horizontal">
+
+        <com.just.valley.reciter.custom.CircleImageView
+            android:id="@+id/user_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBaseline="@+id/user_sign"
+                android:layout_alignBottom="@+id/user_sign"
+                android:layout_alignStart="@+id/user_id"
+                android:gravity="center_vertical"
+                android:text="昵称：Alley"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/user_name"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:gravity="center_vertical"
+                android:text="ID：14325465"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/user_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/user_id"
+                android:gravity="center_vertical"
+                android:text="签到"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_notify"
+        android:layout_below="@id/info_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_info_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="通知与消息"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_weight="3.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_mine_arrowr"
+            android:scaleX="0.5"
+            android:scaleY="0.5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_func"
+        android:layout_below="@id/info_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_info_box"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:background="@drawable/top_radius"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="帮助与反馈"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_weight="3.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_mine_arrowr"
+                android:scaleX="0.5"
+                android:scaleY="0.5"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mLightWhite"/>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:background="@drawable/bottom_radius"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="设置"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_weight="3.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_mine_arrowr"
+                android:scaleX="0.5"
+                android:scaleY="0.5"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_about"
+        android:layout_below="@id/info_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_info_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="关于"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_weight="3.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_mine_arrowr"
+            android:scaleX="0.5"
+            android:scaleY="0.5"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

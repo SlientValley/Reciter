@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mLightWhite"
+    tools:context="com.just.valley.reciter.act.MainActivity">
+
+    <include
+        android:id="@+id/m_actionbar"
+        layout="@layout/layout_actionbar"/>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/m_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/m_actionbar"
+        android:layout_above="@+id/nav_bottom">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bg_info_box">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll">
+
+            </com.youth.banner.Banner>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_content_page"
+            layout="@layout/layout_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <include
+            android:id="@+id/layout_info_page"
+            layout="@layout/layout_info"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/layout_sort_page"
+            layout="@layout/layout_sort"
+            android:visibility="gone"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/nav_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+        <include
+            android:id="@+id/nav_btn"
+            layout="@layout/layout_bottom"/>
+    </FrameLayout>
+
+</RelativeLayout>
